@@ -7,21 +7,23 @@ export default async function handler(req, res) {
     if (!trip) {
       return res
         .status(400)
-        .json({ message: 'Missing required parameter `trip`'})
+        .json({ message: 'Missing required parameter `trip`' })
     }
     if (!name) {
       return res
         .status(400)
-        .json({ message: 'Missing required parameter `name`'})
+        .json({ message: 'Missing required parameter `name`' })
     }
     if (!amount) {
       return res
         .status(400)
-        .json({ message: 'Missing required parameter `amount`'})
+        .json({ message: 'Missing required parameter `amount`' })
     }
-    if (!currency) {return res
+    if (!currency) {
+      return res
         .status(400)
-        .json({ message: 'Missing required parameter `currency`'})}
+        .json({ message: 'Missing required parameter `currency`' })
+    }
 
     await prisma.expense.create({
       data: {
