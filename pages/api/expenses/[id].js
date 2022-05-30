@@ -11,13 +11,13 @@ export default async function handler(req, res) {
     if (!expense) {
       return res.status(404).json({ message: 'Not Found' })
     }
-
     res.status(200).json({ ...expense })
   }
-  if (req.method === 'PUT'){
+
+  if (req.method === 'PUT') {
 
   }
-  if (req.method === 'DELETE'){
+  if (req.method === 'DELETE') {
 
   }
 }
